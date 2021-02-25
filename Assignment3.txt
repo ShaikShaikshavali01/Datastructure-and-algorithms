@@ -1,0 +1,15 @@
+#Create an Array in python using the list and perform delete from any position operation
+
+arr=[1,2,3,4,5,6,7,8]
+num=7
+print("Array before deletion")
+print(arr)
+arr.remove(num)
+print("Array after deletion")
+print(arr)
+
+#output:
+Array before deletion
+[1, 2, 3, 4, 5, 6, 7, 8]
+Array after deletion
+[1, 2, 3, 4, 5, 6, 8]
