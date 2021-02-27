@@ -1,0 +1,87 @@
+Q)Define a function swap that should swap two values and print the swapped variables outside the
+swap function.
+
+def swap(a, b):
+    temp = a
+    a = b
+    b = temp
+    
+    print("After Swapping two Number: num1 = {0} and num2 = {1}".format(a, b))
+ 
+num1 = int(input(" Please Enter the First Value : "))
+num2 = int(input(" Please Enter the Second Value : "))
+
+print("Before Swapping two Number: num1 = {0} and num2 = {1}".format(num1, num2))
+swap(num1, num2)
+
+#output
+Please Enter the First Value : 2
+Please Enter the Second Value : 3
+Before Swapping two Number: num1 = 2 and num2 = 3
+After Swapping two Number: num1 = 3 and num2 = 2
+
+Q)Perform insert at end operation in the linked list
+
+class Node:  
+    def __init__(self,data):  
+        self.data = data  
+        self.next = None  
+          
+class InsertEnd:  
+    
+    def __init__(self):  
+        self.head = None  
+        self.tail = None  
+          
+    
+    def addAtEnd(self, data):  
+          
+        newNode = Node(data) 
+          
+          
+        if(self.head == None):  
+              
+            self.head = newNode  
+            self.tail = newNode  
+        else:  
+            
+            self.tail.next = newNode
+             
+            self.tail = newNode  
+              
+     
+    def display(self):  
+        
+        current = self.head 
+          
+        if(self.head == None):  
+            print("List is empty") 
+            return  
+              
+        print("Adding nodes to the end of the list: ")  
+        while(current != None):  
+            
+            print(current.data)  
+            current = current.next  
+   
+sList = InsertEnd()
+sList.addAtEnd(1)  
+sList.display() 
+sList.addAtEnd(2) 
+sList.display() 
+sList.addAtEnd(3) 
+sList.display()
+
+#output
+Adding nodes to the end of the list: 
+1
+Adding nodes to the end of the list: 
+1
+2
+Adding nodes to the end of the list: 
+1
+2
+3
+   
+  
+
